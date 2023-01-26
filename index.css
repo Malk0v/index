@@ -1,24 +1,252 @@
 /* body styles */
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color:#E5E5E5;
+    background-color:#f5f3f315;
+   
+}
+/*main styles */
+
+.main{
+
+    max-width: 600px;
+    margin: 0 auto;
+    }
+
+ .main-content{
+    background-color: #ffffff;
+    box-shadow: 6px 6px 20px rgba(229, 229, 234, 0.508) ;
+    padding: 1px 9px;
+    margin: 10px;
+    border-radius: 20px;
+    }
+
+.about{
+margin-bottom: 40px;
+}
+
+.about-position{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+margin-bottom: 20px;
+}
+
+.about-name{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    text-align: center;
+    margin:25px;
+}
+
+.about-description{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 400px;
+}
+
+.work-position{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.organization{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;   
+}
+
+.period{
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+color: #979595;
+margin-bottom: 10px;
+}
+
+.line{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.work-list{
+    padding: 0;
+    margin-left: 15px;
+}
+
+.work-list-item{
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+color: #595959;
+}
+
+ 
+ /* sidebar styles */
+.sidebar {
+background-color:#404853;
+margin: 0 auto;
+max-width: 450px;
+border-radius: 20px;
+}
+
+.photo-mob{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+padding:5px;
+max-width: 310px;
+margin-bottom: 30px;
+border-radius:  220px;
+}
+
+.photo{
+    display: none;
+}
+
+/* projects  */
+
+.Projects{
+    margin-bottom: 50px;
+}
+ 
+.project,
+.project-link{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.project-link{
+    margin-left: 10px;
+}
+
+.title{
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+margin-bottom: 10px;
+}
+
+.project-list{
+padding: 0;
+margin-left: 15px;
+}
+
+.project-item,
+.project-bracket
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.sidebar-title{
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+.contact{
+    padding-top: 20px;
+    margin: 4px 4px 5px 30px;
+}
+.contact-type{
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 10px;
+}
+.contact-link{
+    color: #96a1b0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+.tech-skils-list{
+    color: #FB6D3A;   
+    padding-bottom: 30px;
+    margin:0  -20px;
+}
+.tech-skills-text{
+    color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* адаптив */
+
+@media screen and (min-width: 768px) {
+    .main{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 760px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+    font-family: 'Montserrat', sans-serif;
+    background-color:#efe8e893;
    
 }
 /*main styles */
 
 .main{
     display: flex;
+    justify-content: space-around;
     flex-direction: row-reverse;
     width: 1200px;
-    margin: 0 auto;
     }
 
  .main-content{
     background-color: #ffffff;
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 1) ;
+    box-shadow: 6px 6px 20px rgba(144, 139, 139, 0.449) ;
     padding: 105px 90px;
-    margin: 30px;
+    margin:30px 0;
     }
 
 .about{
@@ -107,10 +335,15 @@ width: 370px;
 }
 
 .photo{
+    display: block;
 padding: 5px;
 width: 360px;
 margin-bottom: 50px;
 border-radius:  20px;
+}
+
+.photo-mob{
+    display: none;
 }
 
 /* projects  */
@@ -192,3 +425,5 @@ margin-left: 15px;
     font-size: 14px;
     line-height: 24px;
 }
+
+  }
