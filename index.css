@@ -8,6 +8,9 @@ html {
   box-sizing: border-box;
 }
 
+.block-info{
+    margin-bottom: 60px;
+}
 *,
 *::before,
 *::after {
@@ -64,6 +67,43 @@ margin-bottom: 20px;
     font-size: 14px;
     line-height: 24px;
     max-width: 400px;
+}
+
+.nav{
+    display: none;
+    padding: 10px;
+    margin: 0 0 0 30px;
+
+    color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.nav-mob{
+    padding-bottom: 10px;
+}
+
+.nav-links{
+    margin: 5px;
+    outline: 1px solid rgb(195, 110, 25);
+    color: #FB6D3A;
+    list-style: none;
+    text-decoration: dotted;
+    padding: 2px 7px;
+    border-radius: 3px;
+}
+
+.nav-links:hover{
+    padding: 5px 7px;
+    color: rgb(228, 137, 72);
+    outline: 1px solid rgb(228, 137, 72);
+    
+
+    transform:translate(translate(5px, 10px));
+    transition: all 0.2s ease 0.2s;
 }
 
 .work-position{
@@ -128,7 +168,7 @@ border-radius: 20px;
 padding:5px;
 max-width: 310px;
 margin-bottom: 30px;
-border-radius:  220px;
+border-radius:  80px;
 }
 
 .photo{
@@ -203,6 +243,15 @@ margin-left: 15px;
     font-size: 14px;
     line-height: 24px;
 }
+
+.contact-link:hover{
+    color: #818892;
+    text-decoration: none;
+
+    transform:translate(translate(5px, 10px));
+    transition: all 0.1s ease 0.1s;
+}
+
 .tech-skils-list{
     color: #FB6D3A;   
     padding-bottom: 30px;
@@ -216,16 +265,45 @@ margin-left: 15px;
     line-height: 24px;
 }
 
-/* адаптив */
+/* ============== адаптив tablet ==============*/
 
 @media screen and (min-width: 768px) {
     .main{
     display: flex;
     justify-content: space-around;
     flex-direction: row-reverse;
-    width: 760px;
+    max-width: 800px;
     }
+
+    .nav{
+    display: block;
+    margin-top: 10px;
 }
+
+    .nav-mob{
+    display: none;
+    padding-bottom: 10px;
+}
+
+    .contact{
+    margin: -34px 40px 0 40px;
+}
+
+.tech-skills-text:hover{
+    padding: 5px 7px;
+
+    color: rgb(228, 137, 72);
+    outline: 1px solid rgb(228, 137, 72);
+
+    border-radius: 4px;
+    
+
+    transform:translate(translate(5px, 10px));
+    transition: all 0.1s ease 0.1s;
+}
+
+}
+/* ================ адаптив PC ================ */
 
 @media screen and (min-width: 1200px) {
     body{
@@ -246,7 +324,7 @@ margin-left: 15px;
     background-color: #ffffff;
     box-shadow: 6px 6px 20px rgba(144, 139, 139, 0.449) ;
     padding: 105px 90px;
-    margin:30px 0;
+    margin:30px 0 0 0;
     }
 
 .about{
@@ -272,7 +350,7 @@ margin-bottom: 20px;
 }
 
 .about-description{
-    font-style: normal;
+    font-style: italic;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -326,7 +404,7 @@ color: #595959;
 }
 
  
- /* sidebar styles */
+ /* ============ sidebar styles ============= */
 .sidebar {
 background-color:#1E2939;
 padding-top: 40px;
@@ -395,8 +473,14 @@ margin-left: 15px;
     line-height: 27px;
     margin-bottom: 10px;
 }
+
+.nav{
+    display: block;
+    margin-top: -70px;
+}
+
 .contact{
-    margin: 40px 40px 50px 40px;
+    margin: -40px 40px 50px 40px;
 }
 .contact-type{
     color: #ffffff;
@@ -413,6 +497,7 @@ margin-left: 15px;
     font-size: 14px;
     line-height: 24px;
 }
+
 .tech-skils-list{
     color: #FB6D3A;   
     padding: 0px;
@@ -425,5 +510,18 @@ margin-left: 15px;
     font-size: 14px;
     line-height: 24px;
 }
+}
 
-  }
+.tech-skills-text:hover{
+    padding: 5px 7px;
+
+    color: rgb(228, 137, 72);
+    outline: 1px solid rgb(228, 137, 72);
+
+    border-radius: 4px;
+    
+
+    transform:translate(translate(5px, 10px));
+    transition: all 0.1s ease 0.1s;
+}
+/* ====================== */
